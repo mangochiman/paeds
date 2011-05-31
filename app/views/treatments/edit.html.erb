@@ -1,0 +1,40 @@
+<h1>Editing treatment</h1>
+
+<% form_for(@treatment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :drug_name %><br />
+    <%= f.text_field :drug_name %>
+  </p>
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :duration_per_day %><br />
+    <%= f.text_field :duration_per_day %>
+  </p>
+  <p>
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </p>
+  <p>
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </p>
+  <p>
+    <%= f.label :prescibed_by %><br />
+    <%= f.text_field :prescibed_by %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @treatment %> |
+<%= link_to 'Back', treatments_path %>

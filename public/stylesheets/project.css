@@ -1,0 +1,228 @@
+body {
+   background-color: #fff; 
+   color: #333; 
+     }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+ 
+}
+.over {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   15px;
+  line-height: 18px;
+  color:white;
+      }
+ .links li {
+  float:right;
+  display:inline-block;
+  font-size:   15px;
+  padding: 1em;
+          }
+
+.header {
+  background-color:#57FEFF;
+  padding: 10px;
+  font-size: 20px;
+  text-align:center;
+  font-weight: bold;
+  margin-left: 14px;
+  margin-right: 14px;
+
+  }
+  
+.links {
+  background-color: #aaaaaa;
+  padding: 5px;
+  font-size: 13px;
+  color: white;
+  
+  text-align:center;
+  font-weight: bold;
+  margin-left: 14px;
+  margin-right: 14px;
+
+ }
+ 
+.main_body {
+  background-color: #3BB9FF;
+  padding: 10px;
+  font-size: 13px;
+  text-size:  14px;
+  text-align:center;
+  font-weight: bold;
+  margin-left: 14px;
+  margin-right: 14px;
+          }
+.contacts {
+  background-color: #57FEFF;
+  padding: 5px;
+  font-size: 13px;
+  text-color:  white;
+  text-align:center;
+  font-weight: bold;
+  margin-left: 14px;
+  margin-right: 14px;
+          }
+
+.contacts li {
+  float:right;
+  display: block;
+  color:red;
+  width: 100px;
+  font-size:15px;
+  background: white;
+  padding: 5px;  
+       }
+       
+.link_to {
+  color: white;
+  
+  font-weight: bold;
+}
+.more_details ul li  {
+  display:block;
+  margin-left:630px;
+  font-size:14px;
+  padding:1em;
+  width:190px;
+  background-color:white;
+  color:black;
+  height:14px;
+  text-align:left;
+  
+       }
+.date {
+       margin-left: 14px;
+       margin-right: 14px;
+      }
+
+.email {
+       margin-left: 14px;
+       margin-right: 14px;
+       }
+.count {
+       display:block;
+       width:70px;
+       padding:0.5em;
+       text-align:left;
+       color:white;
+       background-color:green;
+       }
+       
+.pdf {
+       display:block;
+       width:70px;
+       padding:0.5em;
+       text-align:left;
+       color:white;
+       background-color:#eeefff;
+       
+       }
+.yaxis {
+       float:left;
+       writing-mode:tb-rl;
+       margin-left:-70px;
+      -moz-transform:rotate(270deg);
+       margin-top:150px;
+       color:white;
+       font-size:14px;
+      }
+.xaxis {
+       color:white;
+       font-size:14px;
+       margin-top:20px;
+       }
+.chart li {
+  
+      
+       }
+
+.yield {
+       float:left;
+       }
+.main {
+       background-color: black;
+       margin-left: 14px;
+       margin-right: 14px;
+      } 
+.round {
+   -moz-border-radius:    20px;
+  -webkit-border-radius: 20px;
+  border-radius:         20px;
+       }
+   
+  table tr.rowA {background-color: white; }
+  table tr.rowB {background-color: silver; }
+.overview {
+      -moz-border-radius:    20px;
+      -webkit-border-radius: 20px;
+       border-radius:         20px;
+       background-color: white;
+       margin-left: 260px;
+       margin-right:40px;
+       height:35px;
+       
+          }
+.menu {
+      -moz-border-radius:    20px;
+      -webkit-border-radius: 20px;
+       border-radius:         20px;
+       background-color: white;
+       margin-left: auto;
+       margin-right:270px;
+       height:50px;
+      
+      }
+ .see_more li{
+      display:block;
+      float:left;
+      color:white;
+      width:70px;
+      height:25px;
+      background-color:white;
+      
+           }
+ .table_header{
+    background-color:green;
+    color:white;
+    font-size:16px;
+               }
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

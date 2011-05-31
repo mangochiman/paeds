@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  patient_id: 1
+  drug_name: MyString
+  quantity: MyString
+  duration_per_day: 1
+  start_date: 2011-02-15 11:33:08
+  end_date: 2011-02-15 11:33:08
+  prescibed_by: MyString
+
+two:
+  patient_id: 1
+  drug_name: MyString
+  quantity: MyString
+  duration_per_day: 1
+  start_date: 2011-02-15 11:33:08
+  end_date: 2011-02-15 11:33:08
+  prescibed_by: MyString

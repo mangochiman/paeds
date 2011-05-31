@@ -1,0 +1,28 @@
+<h1>Listing referrals</h1>
+
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>Date referred</th>
+    <th>Reason</th>
+    <th>Vehicle reg no</th>
+    <th>Confirmed by</th>
+  </tr>
+
+<% for referral in @referrals %>
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h referral.patient_id %></td>
+    <td><%=h referral.date_referred %></td>
+    <td><%=h referral.reason %></td>
+    <td><%=h referral.vehicle_reg_no %></td>
+    <td><%=h referral.confirmed_by %></td>
+    <td><%= link_to 'Show', referral %></td>
+    <td><%= link_to 'Edit', edit_referral_path(referral) %></td>
+    <td><%= link_to 'Destroy', referral, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New referral', new_referral_path %>

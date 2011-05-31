@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag 'scaffold','project'%>
+
+
+  </head>
+
+    
+    <div class='header'>
+      <h2> PAEDIATRIC WARD MANAGEMENT SYSTEM</h2>
+      
+    </div>
+  <div class='links link_to ' >
+    <div class='over'>
+    <%= link_to "Home",:controller => "pages", :action => "home" %>
+    <%= link_to "Signup",:controller => "users", :action => "new" %>
+    <% if logged_in? %>
+    <%= link_to "Logout", logout_path %>
+    <% else %>
+     <%= link_to "Login", login_path %>
+    <% end %>
+    </div>
+   </div>
+   <div class='Behing_main_page'>
+    <div class='date'>
+      <p> Today's Date and Time:<b> <%= Time.now.asctime %></b></p>
+    </div> 
+    <div class='main_body round'>
+    <div style="overflow:auto;width:900px;height:278px;padding:10px;border:1px solid #eee" >
+    <%= flash[:notice] %>
+
+      <%= yield %>
+    </div>
+    </div>
+    <div class='email'>
+    <b>mangochiman@gmail.com</b>
+    </div>
+   </div>
+   <div class='contacts'>
+    <%= link_to "About",:controller => "pages", :action => "about" %>
+    <%= link_to "Contacts",:controller => "pages", :action => "contacts" %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<p>
+  <b>First name:</b>
+  <%=h @patient.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @patient.last_name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @patient.age %>
+</p>
+
+<p>
+  <b>Village:</b>
+  <%=h @patient.village %>
+</p>
+
+<p>
+  <b>Ta:</b>
+  <%=h @patient.ta %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%=h @patient.district %>
+</p>
+
+<p>
+  <b>Chief complaint:</b>
+  <%=h @patient.chief_complaint %>
+</p>
+
+<p>
+  <b>Guardian:</b>
+  <%=h @patient.guardian %>
+</p>
+
+<p>
+  <b>Temperature:</b>
+  <%=h @patient.temperature %>
+</p>
+
+<p>
+  <b>Respiration rate:</b>
+  <%=h @patient.respiration_rate %>
+</p>
+
+<p>
+  <b>Blood pressure:</b>
+  <%=h @patient.blood_pressure %>
+</p>
+
+<p>
+  <b>Date admitted:</b>
+  <%=h @patient.date_admitted %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

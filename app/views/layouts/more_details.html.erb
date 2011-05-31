@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag 'scaffold','project'%>
+
+
+  </head>
+
+    
+    <div class='header'>
+      <h2> PAEDIATRIC WARD MANAGEMENT SYSTEM</h2>
+      
+    </div>
+  <div class='links link_to ' >
+   <li> <%=render :partial=>'patients/search' %></li>
+  <div class="menu over">
+    <%= link_to "Admission",:controller => "patients", :action => "new" %> |
+    <%= link_to "Treatment",:controller => "treatments", :action => "new" %> |
+    <%= link_to "Referral",:controller => "referrals", :action => "new" %> |
+    <%= link_to "Discharge",:controller => "discharges", :action => "new" %> |
+    <%= link_to "Users",:controller => "users", :action => "show" %>  |
+    <%= link_to "Overview",:controller => "overview", :action => "blank_page" %>
+   
+   
+    <% if logged_in? %>
+    <%= link_to "Logout", logout_path %>
+    <% else %>
+     <%= link_to "Login", login_path %>
+    <% end %>
+   </div> 
+    
+   </div>
+   <div class='Behing_main_page'>
+    <div class='date'>
+      <p> Today's Date and Time:<b> <%= Time.now.asctime %></b></p>
+    </div> 
+    <div class='main_body round'>
+    <div class='see_more'>
+     <li><%= link_to "Reports", :controller=>"overview",:action=>"more_details_blank" %></li>
+    </div>
+    <div class='over overview'>
+   
+     <%= link_to "Patient Overview",:controller => "overview", :action => "patient" %>  <b>|</b>
+     <%= link_to "Treatment Overview",:controller => "overview", :action => "treatment" %>  <b>|</b>
+     <%= link_to "Referral Overview",:controller => "overview", :action => "referral" %>
+       <%= link_to "Summary Overview",:controller => "overview", :action => "combination" %>
+    </div>
+    <div style="overflow:auto;width:900px;height:196px;padding:10px;border:0px solid #eee" >
+   
+    <div class='more_details'>
+   
+    <ul>
+    <div class="yield"> 
+    <%= yield %>
+    </div>
+    <li><%= link_to"Patients on Treatment",:controller=>"overview",:action=>"more_details" %></li><br />
+    <li><%= link_to"Patients without Treatment",:controller=>"overview",:action=>"without_treatment" %></li><br />
+    <li><%= link_to"Discharged Patients",:controller=>"overview",:action=>"discharged" %></li><br />
+    <li><%= link_to"Referred Patients",:controller => "overview",:action=>"referred" %></li>
+    </ul>
+    </div>
+    <%= flash[:notice] %>
+
+     
+      
+     </div>
+    </div>
+    <div class='email'>
+    <b>mangochiman@gmail.com</b>
+    </div>
+   </div>
+   <div class='contacts'>
+    <%= link_to "About",:controller => "pages", :action => "about" %>
+    <%= link_to "Contacts",:controller => "pages", :action => "contacts" %>
+      <li> <% if logged_in? %>
+    <%= link_to "logout", logout_path %>
+    <% else %>
+     <%= link_to "Login", login_path %>
+    <% end %></li>
+    </div>
+ 
+   
+  
+</body>
+
+</html>

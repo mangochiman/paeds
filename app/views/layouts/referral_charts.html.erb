@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag 'scaffold','project'%>
+
+
+  </head>
+
+    
+   
+   <div class='Behing_main_page'>
+    
+    <div class='main_body round'>
+    <div class='see_more'>
+     <li><%= link_to "Menu", :controller=>"overview",:action=>"more_details_blank" %></li>
+    </div>
+   
+    <div style="overflow:auto;width:900px;height:400px;padding:10px;border:0px solid #eee" >
+   
+    <div class='more_details'>
+   
+    <ul>
+    <div class="yield"> 
+    <%= yield %>
+    </div>
+    <li><%= link_to"Line Charts", :controller=>"overview",:action=>"referral_line_chart"%></li><br />
+    <li><%= link_to"Bar Charts", :controller=>"overview",:action=>"referral_bar_chart"  %></li><br />
+    
+    </ul>
+    </div>
+    <%= flash[:notice] %>
+
+     
+      
+     </div>
+    </div>
+    <div class='email'>
+    <b>mangochiman@gmail.com</b>
+    </div>
+   </div>
+   <div class='contacts'>
+   Patients Graph
+    
+      <li> <% if logged_in? %>
+    <%= link_to "logout", logout_path %>
+    <% else %>
+     <%= link_to "Login", login_path %>
+    <% end %></li>
+    </div>
+ 
+   
+  
+</body>
+
+</html>

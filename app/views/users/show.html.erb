@@ -1,0 +1,18 @@
+<h1>Listing All Users</h1>
+
+
+<center><table>
+  <th>Username</th>
+  <th>Email</th>
+  <th>Passsword</th>
+  
+<% for user in @user %>
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+   <td><%= user.login %></td> 
+   <td><%= user.email %></td> 
+   <td><%= user.password %></td>   
+  </tr> 
+ <% end %>
+ </table>
+ </center>
+

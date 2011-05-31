@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: hospital_development
+  username: root
+  password: baobab
+  host: localhost
+
+test:
+  adapter: mysql
+  database: hospital_test
+  username: root
+  password: baobab
+  host: localhost
+ 
+production:
+  adapter: mysql
+  database: hospital_production
+  username: root
+  password: baobab
+  host: localhost

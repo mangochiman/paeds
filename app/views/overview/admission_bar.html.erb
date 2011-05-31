@@ -1,0 +1,94 @@
+
+<html>
+<head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <script language="javascript" type="text/javascript" src="../javascripts/jquery.js"></script> <script language="javascript" type="text/javascript" src="../javascripts/jquery.flot.js"></script> </head>
+<body>
+Number of Patients Admitted Against Months  <div class="yaxis">patients</div>
+<div class="graph" >
+<div id="placeholder" style="width:600px;height:300px"></div>
+<script language="javascript" type="text/javascript">
+ 
+var $j = jQuery.noConflict();
+ 
+$j(function () {
+var d1 =[1,<%= @january %>];
+var d2 =[2,<%= @february %>];
+var d3 =[3,<%= @march %>];
+var d4 =[4,<%= @april %>];
+var d5 =[5,<%= @may %>];
+var d6 =[6,<%= @june %>];
+var d7 =[7,<%= @july %>];
+var d8 =[8,<%= @august%>];
+var d9 =[9,<%= @september %>];
+var d10 =[10,<%= @october %>];
+var d11 =[11,<%= @november %>];
+var d12 =[12,<%= @december %>];
+var data = [
+    {   
+        
+        data: [d1],
+        bars:{ show: true, fill: true,fillColor: "red"}
+    },
+    {   
+        data: [d2],
+        bars:{ show: true,fill: true,fillColor: "blue"}
+    },
+    {   
+        data: [d3],
+        bars:{ show: true,fill: true,fillColor: "green"}
+    },
+    {  
+        data: [d4],
+        bars:{ show: true,fill: true,fillColor: "white"}
+    },
+    {  
+        data: [d5],
+        bars:{ show: true,fill: true,fillColor: "pink"}
+    },
+    {  
+        data: [d6],
+        bars:{ show: true,fill: true,fillColor: "yellow"}
+    },
+    {  
+        data: [d7],
+        bars:{ show: true,fill: true,fillColor: "violet"}
+    },
+    {  
+        data: [d8],
+        bars:{ show: true,fill: true,fillColor: "indigo"}
+    },
+    {  
+        data: [d9],
+        bars:{ show: true,fill: true}
+    },
+    {  
+        data: [d10],
+        bars:{ show: true,fill: true}
+    },
+    {
+        data: [d11],
+        bars:{ show: true,fill: true}
+    },
+    {
+        data: [d12],
+        bars:{ show: true,fill: true}
+    }
+];
+var options={
+        series: {
+        bars:{ show: true,fill: true,barWidth: 0.5 }
+        },
+        grid: { hoverable: true,clickable: true, borderWidth:1 },
+        yaxis: { ticks: 5, tickDecimals:0 },
+        xaxis: {ticks: [[1, ' Jan'], [2, 'Feb'], [3, 'March'], [4, 'April'], [5, 'May'], [6, 'June'], [7, 'July'], [8, 'Aug'], [9, 'Sept'], [10, 'Oct'], [11, 'Nov'], [12, 'Dec']]},
+
+    };
+var plotarea = $j("#placeholder");
+
+$j.plot( plotarea , data, options );
+});
+
+</script>
+</div>
+<div class="xaxis">Months</div>
+</body>
+</html>

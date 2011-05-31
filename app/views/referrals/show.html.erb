@@ -1,0 +1,28 @@
+<p>
+  <b>Patient:</b>
+  <%=h @referral.patient_id %>
+</p>
+
+<p>
+  <b>Date referred:</b>
+  <%=h @referral.date_referred %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%=h @referral.reason %>
+</p>
+
+<p>
+  <b>Vehicle reg no:</b>
+  <%=h @referral.vehicle_reg_no %>
+</p>
+
+<p>
+  <b>Confirmed by:</b>
+  <%=h @referral.confirmed_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_referral_path(@referral) %> |
+<%= link_to 'Back', referrals_path %>

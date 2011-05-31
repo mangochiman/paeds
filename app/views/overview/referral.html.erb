@@ -1,0 +1,27 @@
+  <h1>Referrals Overview</h1>
+
+<center><table >
+  <tr>
+    <th>Patient Id</th>
+    <th>Date Referred</th>
+    <th>Reason</th>
+    <th>Vehicle Reg Number</th>
+    <th>Confirmed By</th>
+  </tr>
+
+<% for referral in @referral %>
+
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h referral.patient_id %></td>
+    <td><%=h referral.date_referred %></td>
+    <td><%=h referral.reason %></td>
+    <td><%=h referral.vehicle_reg_no %></td>
+    <td><%=h referral.confirmed_by %></td>
+    
+  </tr>
+
+<% end %>
+</table>
+</center>
+
+

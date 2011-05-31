@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  patient_id: 1
+  date_referred: 2011-02-15 11:40:00
+  reason: MyText
+  vehicle_reg_no: MyString
+  confirmed_by: MyString
+
+two:
+  patient_id: 1
+  date_referred: 2011-02-15 11:40:00
+  reason: MyText
+  vehicle_reg_no: MyString
+  confirmed_by: MyString

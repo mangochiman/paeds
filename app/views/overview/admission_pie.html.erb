@@ -1,0 +1,47 @@
+
+<html>
+<head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <script language="javascript" type="text/javascript" src="../javascripts/jquery.js"></script> <script language="javascript" type="text/javascript" src="../javascripts/jquery.flot.js"></script> </head>
+<body> <div class="yaxis">patients</div>
+<div class="graph" >
+<div id="placeholder" style="width:600px;height:300px"></div>
+<script language="javascript" type="text/javascript">
+ 
+var $j = jQuery.noConflict();
+ 
+$j(function () {
+var data = 
+ [
+         { label: "Serie1",  data: 10},
+         { label: "Serie2",  data: 30},
+                 { label: "Serie3",  data: 90},
+                 { label: "Serie4",  data: 70},
+                 { label: "Serie5",  data: 80},
+                 { label: "Serie6",  data: 110}
+  ];
+  
+  var options = {
+  pie: {
+
+  show: true,
+  pieStrokeLineWidth: 1,
+  pieStrokeColor: '#FFF',
+  pieChartRadius: 100,                    
+  centerOffsetTop:30,             
+  centerOffsetLeft:30,            
+  showLabel: true,                            
+  labelOffsetFactor: 5/6,                 
+  labelOffset: 0,                  
+  labelBackgroundOpacity: 0.55,
+  }
+  };
+
+var plotarea = $j("#placeholder");
+ 
+$j.plot( plotarea, data, options );
+});
+
+</script>
+</div>
+<div class="xaxis">Months</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+  <h1>Treatments Overview</h1>
+
+<center><table >
+  <tr>
+    <th>Patient Id</th>
+    <th>Drug Name</th>
+    <th>Quantity</th>
+    <th>Duration Per Day</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Prescribed By</th>
+  </tr>
+
+<% for treatment in @treatment %>
+
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h treatment.patient_id %></td>
+    <td><%=h treatment.drug_name %></td>
+    <td><%=h treatment.quantity %></td>
+    <td><%=h treatment.duration_per_day %></td>
+    <td><%=h treatment.start_date %></td>
+    <td><%=h treatment.end_date %></td>
+    <td><%=h treatment.prescibed_by %></td>
+  </tr>
+
+<% end %>
+</table>
+</center>
+
+

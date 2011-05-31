@@ -1,0 +1,29 @@
+<table>
+<tr class='table_header' >
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Age</th>
+  <th>Date Discharged</th>
+  <th>Drugs Taken Home</th>
+  <th>Discharged By</th>
+  
+</tr>
+<% @patients.each do |patient| %>
+<tr class="<%= cycle('rowA', 'rowB') %>">
+ <td><%= patient.first_name %></td>
+ <td><%= patient.last_name %></td>
+ <td><%= patient.age %></td>
+ <td><%= patient.discharges.collect{|t| t.date_discharged}%></td>
+ <td><%= patient.discharges.collect{|t| t.drugs_taken_home}%></td>
+ <td><%= patient.discharges.collect{|t| t.discharged_by}%></td>
+ </tr>
+<% end %>
+</table>
+<br />
+<div class='count'>
+Total : <%= @patients_count %> 
+</div>
+<div class="pdf">
+<%= link_to "PDF", :controller => "overview", :action =>"gone_home" %>
+</div>
+

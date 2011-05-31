@@ -1,0 +1,60 @@
+<h1>Editing patient</h1>
+
+<% form_for(@patient) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :village %><br />
+    <%= f.text_field :village %>
+  </p>
+  <p>
+    <%= f.label :ta %><br />
+    <%= f.text_field :ta %>
+  </p>
+  <p>
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </p>
+  <p>
+    <%= f.label :chief_complaint %><br />
+    <%= f.text_area :chief_complaint %>
+  </p>
+  <p>
+    <%= f.label :guardian %><br />
+    <%= f.text_field :guardian %>
+  </p>
+  <p>
+    <%= f.label :temperature %><br />
+    <%= f.text_field :temperature %>
+  </p>
+  <p>
+    <%= f.label :respiration_rate %><br />
+    <%= f.text_field :respiration_rate %>
+  </p>
+  <p>
+    <%= f.label :blood_pressure %><br />
+    <%= f.text_field :blood_pressure %>
+  </p>
+  <p>
+    <%= f.label :date_admitted %><br />
+    <%= f.datetime_select :date_admitted %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @patient %> |
+<%= link_to 'Back', patients_path %>

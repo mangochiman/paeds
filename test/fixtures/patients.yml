@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  age: 1
+  village: MyString
+  ta: MyString
+  district: MyString
+  chief_complaint: MyText
+  guardian: MyString
+  temperature: 1
+  respiration_rate: 1
+  blood_pressure: 1
+  date_admitted: 2011-02-15 11:28:04
+
+two:
+  first_name: MyString
+  last_name: MyString
+  age: 1
+  village: MyString
+  ta: MyString
+  district: MyString
+  chief_complaint: MyText
+  guardian: MyString
+  temperature: 1
+  respiration_rate: 1
+  blood_pressure: 1
+  date_admitted: 2011-02-15 11:28:04

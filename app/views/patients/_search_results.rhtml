@@ -1,0 +1,40 @@
+
+
+<table border='0'>
+  <tr class="altrow">
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+    <th>Village</th>
+    <th>Ta</th>
+    <th>District</th>
+    <th>Chief complaint</th>
+    <th>Guardian</th>
+    <th>Temperature</th>
+    <th>Respiration rate</th>
+    <th>Blood pressure</th>
+    <th>Date admitted</th>
+  </tr>
+
+<% @patients .each do |patient| %>
+
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h patient.first_name %></td>
+    <td><%=h patient.last_name %></td>
+    <td><%=h patient.age %></td>
+    <td><%=h patient.village %></td>
+    <td><%=h patient.ta %></td>
+    <td><%=h patient.district %></td>
+    <td><%=h patient.chief_complaint %></td>
+    <td><%=h patient.guardian %></td>
+    <td><%=h patient.temperature %></td>
+    <td><%=h patient.respiration_rate %></td>
+    <td><%=h patient.blood_pressure %></td>
+    <td><%=h patient.date_admitted %></td>
+   
+  </tr>
+
+<% end %>
+</table>
+
+

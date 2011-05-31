@@ -1,0 +1,32 @@
+<h1>Listing treatments</h1>
+
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>Drug name</th>
+    <th>Quantity</th>
+    <th>Duration per day</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Prescibed by</th>
+  </tr>
+
+<% for treatment in @treatments %>
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h treatment.patient_id %></td>
+    <td><%=h treatment.drug_name %></td>
+    <td><%=h treatment.quantity %></td>
+    <td><%=h treatment.duration_per_day %></td>
+    <td><%=h treatment.start_date %></td>
+    <td><%=h treatment.end_date %></td>
+    <td><%=h treatment.prescibed_by %></td>
+    <td><%= link_to 'Show', treatment %></td>
+    <td><%= link_to 'Edit', edit_treatment_path(treatment) %></td>
+    <td><%= link_to 'Destroy', treatment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New treatment', new_treatment_path %>

@@ -1,0 +1,38 @@
+<p>
+  <b>Patient:</b>
+  <%=h @treatment.patient_id %>
+</p>
+
+<p>
+  <b>Drug name:</b>
+  <%=h @treatment.drug_name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @treatment.quantity %>
+</p>
+
+<p>
+  <b>Duration per day:</b>
+  <%=h @treatment.duration_per_day %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @treatment.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @treatment.end_date %>
+</p>
+
+<p>
+  <b>Prescibed by:</b>
+  <%=h @treatment.prescibed_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
+<%= link_to 'Back', treatments_path %>

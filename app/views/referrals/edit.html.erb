@@ -1,0 +1,32 @@
+<h1>Editing referral</h1>
+
+<% form_for(@referral) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :date_referred %><br />
+    <%= f.datetime_select :date_referred %>
+  </p>
+  <p>
+    <%= f.label :reason %><br />
+    <%= f.text_area :reason %>
+  </p>
+  <p>
+    <%= f.label :vehicle_reg_no %><br />
+    <%= f.text_field :vehicle_reg_no %>
+  </p>
+  <p>
+    <%= f.label :confirmed_by %><br />
+    <%= f.text_field :confirmed_by %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @referral %> |
+<%= link_to 'Back', referrals_path %>

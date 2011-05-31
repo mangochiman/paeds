@@ -1,0 +1,23 @@
+<p>
+  <b>Patient:</b>
+  <%=h @discharge.patient_id %>
+</p>
+
+<p>
+  <b>Date discharged:</b>
+  <%=h @discharge.date_discharged %>
+</p>
+
+<p>
+  <b>Drugs taken home:</b>
+  <%=h @discharge.drugs_taken_home %>
+</p>
+
+<p>
+  <b>Discharged by:</b>
+  <%=h @discharge.discharged_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_discharge_path(@discharge) %> |
+<%= link_to 'Back', discharges_path %>

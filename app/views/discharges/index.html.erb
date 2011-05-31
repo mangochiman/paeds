@@ -1,0 +1,26 @@
+<h1>Listing discharges</h1>
+
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>Date discharged</th>
+    <th>Drugs taken home</th>
+    <th>Discharged by</th>
+  </tr>
+
+<% for discharge in @discharges %>
+  <tr class="<%= cycle('rowA', 'rowB') %>">
+    <td><%=h discharge.patient_id %></td>
+    <td><%=h discharge.date_discharged %></td>
+    <td><%=h discharge.drugs_taken_home %></td>
+    <td><%=h discharge.discharged_by %></td>
+    <td><%= link_to 'Show', discharge %></td>
+    <td><%= link_to 'Edit', edit_discharge_path(discharge) %></td>
+    <td><%= link_to 'Destroy', discharge, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New discharge', new_discharge_path %>

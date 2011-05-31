@@ -1,0 +1,28 @@
+<h1>Editing discharge</h1>
+
+<% form_for(@discharge) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :date_discharged %><br />
+    <%= f.datetime_select :date_discharged %>
+  </p>
+  <p>
+    <%= f.label :drugs_taken_home %><br />
+    <%= f.text_area :drugs_taken_home %>
+  </p>
+  <p>
+    <%= f.label :discharged_by %><br />
+    <%= f.text_field :discharged_by %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @discharge %> |
+<%= link_to 'Back', discharges_path %>
